@@ -8,8 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="br.ufscar.mrtakata.bmi.DisplayMessageActivity">
+    tools:context="br.ufscar.mrtakata.bmi.DisplayMessageActivity"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -30,6 +30,8 @@
             android:textSize="@dimen/abc_text_size_headline_material"
             android:textAlignment="center"
             android:gravity="center_vertical"
-            android:text="@+id/BMI_number" />
+            android:text="@string/BMI_number"
+            android:id="@+id/BMI_number"/>
     </LinearLayout>
+
 </LinearLayout>
