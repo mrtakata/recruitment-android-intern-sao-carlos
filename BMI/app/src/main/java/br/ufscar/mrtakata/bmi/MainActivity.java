@@ -27,13 +27,34 @@ public class MainActivity extends AppCompatActivity {
         try{
             float height = Float.valueOf(height_value.getText().toString());
             float weight = Float.valueOf(weight_value.getText().toString());
-            String message = Float.toString(calculateBMI(height, weight));
+            if(height > 3.00){
+                throw new Exception("Height out of bounds.");
+            }
+            if(weight > 1000){
+                throw new Exception("Weight out of bounds.");
+            }
+            String message = String.format("%.1f", calculateBMI(height, weight) );
             intent.putExtra(EXTRA_MESSAGE, message);
             startActivity(intent);
         }
         catch(Exception e){
-            Toast.makeText(this, "Campo(s) Vazio(s).", Toast.LENGTH_LONG).show();
+            if( "".equals( height_value.getText().toString() ) && "".equals(weight_value.getText().toString() ) ){
+                Toast.makeText(this, "Height and Weight needed", Toast.LENGTH_LONG).show();
+            }
+            else if( "".equals( height_value.getText().toString() ) ){
+                Toast.makeText(this, "Height needed.", Toast.LENGTH_LONG).show();
+            }
+            else if( "".equals( weight_value.getText().toString() ) ){
+                Toast.makeText(this, "Weight needed.", Toast.LENGTH_LONG).show();
+            }
 
+            if("Height out of bounds.".equals( e.getMessage() ) ){
+                Toast.makeText(this, "You can't that tall unless you are not human!", Toast.LENGTH_LONG).show();
+            }
+
+            if("Weight out of bounds.".equals( e.getMessage() ) ){
+                Toast.makeText(this, "You can't be that heavy (I guess).", Toast.LENGTH_LONG).show();
+            }
 
 //            LinearLayout layout = (LinearLayout) findViewById(R.id.main);
 //            layout.addView(textView);
