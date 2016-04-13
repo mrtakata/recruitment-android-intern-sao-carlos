@@ -22,14 +22,27 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/abc_text_size_headline_material"
+            android:textSize="70dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textAlignment="center"
             android:gravity="center_vertical"
-            android:text="@+id/BMI_number" />
+            android:text="@string/BMI_number"
+            android:id="@+id/BMI_number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAlignment="center"
+            android:text="@string/BMI_message_result"
+            android:id="@+id/BMI_message_result" />
+
     </LinearLayout>
 </LinearLayout>

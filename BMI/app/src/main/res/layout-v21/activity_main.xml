@@ -14,21 +14,24 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/abc_action_bar_default_height_material">
+        android:layout_height="80dp">
 
         <EditText android:id="@+id/weight_value"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="numberDecimal"
             android:hint="@string/weight_value"
+            android:textAlignment="center"
             android:layout_weight="1"
-            style="@android:style/Theme.Material.InputMethod" />
+            style="@android:style/Theme.Material.InputMethod"
+            android:textSize="40dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/weight_scale"
+            android:textSize="40dp"
             android:id="@+id/weight_measure" />
 
     </LinearLayout>
@@ -36,13 +39,15 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/abc_action_bar_default_height_material">
+        android:layout_height="80dp">
 
         <EditText android:id="@+id/height_value"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="numberDecimal"
             android:hint="@string/height_value"
+            android:textAlignment="center"
+            android:textSize="40dp"
             android:layout_weight="1"
             style="@android:style/Theme.Material.InputMethod" />
 
@@ -51,6 +56,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/height_scale"
+            android:textSize="40dp"
             android:id="@+id/height_measure" />
     </LinearLayout>
 
@@ -60,13 +66,14 @@
         android:layout_height="@dimen/abc_action_bar_default_height_material">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="@string/button_calculate"
-            android:elegantTextHeight="true"
+            android:textColor="#fff"
             android:onClick="sendMessage"
-            style="@android:style/Widget.Material.Button.Small"
+            android:backgroundTint="#01bb01"
+            style="@android:style/Widget.Material.Button"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 

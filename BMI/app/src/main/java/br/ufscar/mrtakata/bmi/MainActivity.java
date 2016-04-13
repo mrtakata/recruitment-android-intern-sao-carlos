@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if("Height out of bounds.".equals( e.getMessage() ) ){
-                Toast.makeText(this, "You can't that tall unless you are not human!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "You can't be that tall unless you are not human!", Toast.LENGTH_LONG).show();
             }
 
             if("Weight out of bounds.".equals( e.getMessage() ) ){
